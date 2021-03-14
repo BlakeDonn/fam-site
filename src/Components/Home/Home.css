@@ -1,15 +1,27 @@
-.Home{
- display:grid;
- height:100vh;
- width:100vw;
- grid-template-columns: 25% 75%;
- grid-template-rows:100%;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+
+.Home {
+  background: #deb992;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-rows: 10% 15%;
 }
-.Left-Header{
-  height:100%;
+.Header {
+  display: grid;
+  align-items:center;
+  text-align: center;
+  grid-template-columns: 12.5% 12.5% 50% 12.5% 12.5%;
+}
+.Welcome {
+  font-family: "Oswald", sans-serif;
+  text-align:center;
+  color: #051622;
+  font-size:100px;
+  height: 100%;
   border: 1px dotted green;
 }
-.Right-Header{
-  height:100%;
+.Description {
+  height: 100%;
   border: 1px dotted blue;
 }
