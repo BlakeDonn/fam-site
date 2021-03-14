@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap");
 
 .Home {
   background: #deb992;
@@ -9,17 +9,20 @@
 }
 .Header {
   display: grid;
-  align-items:center;
+  align-items: center;
   text-align: center;
   grid-template-columns: 12.5% 12.5% 50% 12.5% 12.5%;
 }
 .Welcome {
   font-family: "Oswald", sans-serif;
-  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   color: #051622;
-  font-size:100px;
-  height: 100%;
   border: 1px dotted green;
+}
+.Message {
+  font-size: 4em;
 }
 .Description {
   height: 100%;

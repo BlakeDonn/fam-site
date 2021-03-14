@@ -7,11 +7,13 @@ export const Home: React.FC<any> = () => {
       <div className="Header">
         <h3>Home</h3>
         <h3>About</h3>
-        <h3>placeholder</h3>
+        <h3>Placeholder</h3>
         <h3>Profile</h3>
         <h3>Support</h3>
       </div>
-      <div className="Welcome">Hey Fam!</div>
+      <div className="Welcome">
+        <h1 className="Message">Hey Fam!</h1>
+      </div>
       <div className="Description">I am the right header</div>
     </div>
   );
