@@ -3,7 +3,7 @@ import {handleLog} from "../../Helpers/firebase";
 import { useState, useEffect } from "react";
 import { firebaseInit } from "../../Helpers/firebase";
 
-export const Login: React.FC<any> = () => {
+export const Login: React.FC<any> = (updateLogin) => {
   useEffect(()=>{
    firebaseInit()
   },[])
@@ -12,7 +12,7 @@ export const Login: React.FC<any> = () => {
     setUserDetails({ ...userDetails, [event.target.type]: event.target.value });
   };
   return (
-    <form onSubmit={(event) =>handleLog(event, userDetails)}className="Login">
+    <form onSubmit={(event) =>handleLog(event, userDetails, updateLogin)}className="Login">
       <input
         type="email"
         placeholder="Please enter your email"

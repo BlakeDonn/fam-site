@@ -1,9 +1,11 @@
-import { Route } from "react-router-dom";
 import { Login } from "../Login/Login";
+import { Profile } from "../Profile/Profile";
+import { useState } from "react";
 import { Header } from "../Header/Header";
 import "./Home.css";
 
 export const Home: React.FC<any> = () => {
+  const [loggedIn, updateLogin] = useState(false)
   return (
     <div className="Home">
       <Header />
@@ -13,7 +15,7 @@ export const Home: React.FC<any> = () => {
       <div className="Description">
         <article>The Family Site for THE famliy</article>
       </div>
-      <Login />
+      {loggedIn ? <Profile /> : <Login updateLogin={updateLogin} />  }
     </div>
   );
 };
