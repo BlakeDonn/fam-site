@@ -1,0 +1,7 @@
+
+.Header {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: 12.5% 12.5% 50% 12.5% 12.5%;
+}
