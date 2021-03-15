@@ -14,7 +14,12 @@ export const Home: React.FC<any> = () => {
       <div className="Welcome">
         <h1 className="Message">Hey Fam!</h1>
       </div>
-      <div className="Description">I am the right header</div>
+      <div className="Description">
+        <article>The Family Site for THE famliy</article>
+      </div>
+      <div className="Login-form">
+        <article>The Family Site for THE famliy</article>
+      </div>
     </div>
   );
 };
