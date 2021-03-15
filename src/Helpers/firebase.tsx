@@ -24,28 +24,51 @@ export const logOut = () => {
    localStorage.removeItem("email");
    localStorage.removeItem("userUID");
 };
-const signUp = ({ email, password }: LogInFormat): void => {
+const signUp = (
+   { email, password }: LogInFormat,
+   updateLogin: (arg: boolean) => void
+): void => {
    firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
          const user = userCredential.user;
-         console.log(user)
+         updateLogin(true);
       })
       .catch((error) => {
          const errorCode = error.code;
          const errorMessage = error.message;
+         console.log(errorMessage);
+      });
+};
+
+const logIn = (
+   { email, password }: LogInFormat,
+   { updateLogin }: any
+): void => {
+   updateLogin(true);
+   firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+         const user = userCredential.user;
+      })
+      .catch((error) => {
+         const errorCode = error.code;
+         const errorMessage = error.message;
+         console.log(errorMessage);
       });
 };
 
 export const handleLog = (
    event: React.FormEvent<HTMLFormElement>,
-   userDetails: LogInFormat
+   userDetails: LogInFormat,
+   updateLogin: any
 ): void => {
    event.preventDefault();
    if (userDetails.signUp) {
-      signUp(userDetails);
+      signUp(userDetails, updateLogin);
    } else {
-      //logIn(userDetails);
+      logIn(userDetails, updateLogin);
    }
 };
