@@ -7,12 +7,6 @@
   width: 100vw;
   grid-template-rows: 10% 15% 10%;
 }
-.Header {
-  display: grid;
-  align-items: center;
-  text-align: center;
-  grid-template-columns: 12.5% 12.5% 50% 12.5% 12.5%;
-}
 .Welcome {
   font-family: "Oswald", sans-serif;
   display:flex;
@@ -22,7 +16,7 @@
   border: 1px dotted green;
 }
 .Message {
-  font-size: 4em;
+  font-size: 3em;
 }
 .Description {
   display:flex;
